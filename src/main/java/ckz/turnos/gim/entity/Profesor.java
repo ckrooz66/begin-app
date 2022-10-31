@@ -42,15 +42,12 @@ private static final long serialVersionUID = 1L;
 	@Column(name="dni", unique=true  )
 	private String dni;
 	
-	@Column(name="direccion"  )
+	@Column(name="direccion")
 	private String direccion;
 	@Column(name="estado"  )
 	private int estado;
 	
-	
-	
-	
-	@OneToMany(cascade =CascadeType.ALL,fetch = FetchType.LAZY)
+	@OneToMany( cascade =CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name="profesor_id",referencedColumnName="id")
 	private List<Turno> turnos = new ArrayList<>();
 	

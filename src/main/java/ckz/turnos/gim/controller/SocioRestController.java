@@ -1,6 +1,7 @@
 package ckz.turnos.gim.controller;
 
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -33,8 +34,17 @@ public class SocioRestController {
 	@ResponseStatus(HttpStatus.OK)
 	public List<Socio> getSocio(){
 		
-		return sociosService.findAll();
 		
+		List<Socio> lista = new ArrayList<Socio>();
+		
+		lista= sociosService.findAll();
+		
+		for(Socio s:lista) {
+			
+			
+			System.out.println(s);
+		}
+		return lista;
 		
 	};
 	
