@@ -45,7 +45,7 @@ public class ProfesorRestController {
 		
 	};
 	
-	//GIT
+	//GIT test
 	@GetMapping("/obtenerProfesor")
 	@ResponseStatus(HttpStatus.OK)
 	public Profesor getProfesor(@RequestHeader String dni){
