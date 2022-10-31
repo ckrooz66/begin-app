@@ -36,9 +36,14 @@ public class Turno  implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date fechadeturno;
 	
-	@Column(name = "estado")
-	private int estado;
+	@ManyToOne
+	@JoinColumn(name="estado_id" )
+	private Estado estado;
 	
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+
 	@ManyToOne
 	@JoinColumn(name="profesor_id")
     private Profesor profesor ;
@@ -93,13 +98,6 @@ public class Turno  implements Serializable{
 		this.fechadeturno = fechadeturno;
 	}
 
-	public int getEstado() {
-		return estado;
-	}
 
-	public void setEstado(int estado) {
-		this.estado = estado;
-	}
-	
  
 }
