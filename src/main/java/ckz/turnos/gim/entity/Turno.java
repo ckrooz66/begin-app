@@ -40,11 +40,7 @@ public class Turno  implements Serializable{
 	@JoinColumn(name="estado_id" )
 	private Estado estado;
 	
-	public void setEstado(Estado estado) {
-		this.estado = estado;
-	}
-
-	@ManyToOne
+    @ManyToOne
 	@JoinColumn(name="profesor_id")
     private Profesor profesor ;
 	
@@ -96,6 +92,14 @@ public class Turno  implements Serializable{
 
 	public void setFechadeturno(Date fechadeturno) {
 		this.fechadeturno = fechadeturno;
+	}
+	
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
 	}
 
 
