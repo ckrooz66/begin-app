@@ -38,7 +38,7 @@ public class Turno  implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name="estado_id" )
-	private Estado estado;
+	private Estado estado; 
 	
     @ManyToOne
 	@JoinColumn(name="profesor_id")
